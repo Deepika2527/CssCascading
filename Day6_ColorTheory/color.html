@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Throry</title>
+    <style>
+        .container{
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cards{
+            border: 1px solid black;
+            height: 300px;
+            width:300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .colors{
+            border: 1px solid black;
+            height: 100px;
+            width:100px;
+            border-radius: 50%;
+
+        }
+        #clr{
+            background-color: peachpuff;
+            color: blue;
+        }
+        #rgb{
+            background-color: rgb(62, 131, 163);
+        }
+        #rgba{
+            background-color: rgb(56,3,99,0.5);
+        }
+        #hex{
+            background-color: #6539DB;
+        }
+        #hsl{
+            background-color: hsl(10deg, 90%, 50%);
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="cards">
+            <div class="colors" id="clr"></div>
+            <p id="clr"> color name</p>
+        </div>
+        <div class="cards">
+            <div class="colors" id="rgb"></div>
+            <p>RGB</p>
+        </div>
+        <div class="cards">
+            <div class="colors" id="rgba"></div>
+            <p>RGBA</p>
+        </div>
+        <div class="cards">
+            <div class="colors" id="hex"></div>
+            <p>HEXA</p>
+        </div>
+        <div class="cards">
+            <div class="colors" id="hsl"></div>
+            <p>HSL</p>
+        </div>
+        <div class="cards">
+            <div class="colors"></div>
+            <p></p>
+        </div>
+    </div>
+    
+</body>
+</html>

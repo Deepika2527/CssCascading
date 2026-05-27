@@ -1,0 +1,28 @@
+Postions:
+
+5 types of postions are there in css
+
+1. static - Default
+2. Relative
+3. Absolute
+4. Fixed
+5. Sticky
+
+Relative- current postion,it is leaving some space, listening to the document flow
+Absolute : ViewPort/parental postion, it will not listen to the document flow, place will not be preserved,width will be shrinked accoring tomthe elememt
+
+fixed:  Width is Shrinking to the content, ViewPort, not listening to the document flow, no place is reerved
+
+stick: untill it reaches its values it will be normal aftter that it will be sticky.
+
+
+document flow,
+witdth each postion is occupying
+how they move
+
+
+How to place them
+top
+bottom
+left 
+right

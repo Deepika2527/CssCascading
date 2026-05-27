@@ -1,0 +1,83 @@
+div{
+    border: 1px solid black;
+    margin: 10px;
+}
+#static{
+    background-color: tomato;
+    position: static;
+    height: 100px;
+    width: 100px;
+    top:100px;
+}
+#relative{
+    background-color: red;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    /* top: 100px;
+    left:1000px; */
+    /* bottom:100px;
+    right:100px; */
+
+    /* top:0px;
+    top:100px; */
+}
+
+
+/* section{
+    border: 3px solid orangered;
+    position: relative;
+    top:100px;
+    height: 200px;
+} */
+/* #absolute{
+    background-color: teal;
+    position: absolute;
+    top:100px;
+    left:100px;
+
+} */
+
+/* #absolute{
+
+    background-color: yellow;
+    position: absolute;
+    
+
+} */
+
+/* #fixed{
+    background-color: darkgreen;
+    color: white;
+    height: 100px;
+    width:100px;
+    border-radius: 10px;
+    position: fixed;
+    top:100px;
+    text-align: center;
+    line-height: 100px;
+} */
+
+/* #sticky{
+    background-color: darkblue;
+    color: aliceblue;
+    position: sticky;
+    top:100px;
+} */
+button{
+    background-color: orangered;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    position: fixed;
+    /* top:10px; */
+    bottom: 400px;
+    /* left: 100px; */
+    right: 10px;
+    writing-mode: vertical-lr;
+
+}
+button:hover{
+    background-color: aquamarine;
+}

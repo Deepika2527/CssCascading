@@ -1,0 +1,36 @@
+.container{
+    border:1px solid black;
+    height: 500px;
+    width: 1000px;
+    background-color: aqua;
+    margin: 60px auto;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap;
+    justify-content: center;
+    align-items: end;
+    align-content: space-around; */
+    /* gap: 100px; */
+
+}
+
+.card{
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    margin: 1px;
+}
+
+#card1{
+    order: 0;
+    flex-grow: 1;
+    /* flex-shrink: 4; */
+    flex-basis: 250px;
+}
+#card2{
+    order: 0;
+}
+#card3{
+    /* flex-grow: 1; */
+    order: 0;
+}

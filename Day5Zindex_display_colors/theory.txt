@@ -1,0 +1,12 @@
+Z-index- This is used with the posiitions and with the help of the z-index we can place the element at the top when they are overlapped or stacked.
+
+Syntax:
+z-index : value;
+the more higher value then that element will be placed at the top.
+
+
+
+
+
+Display properties:
+In display properties we use display : None,Block,Inline,Inline-Block

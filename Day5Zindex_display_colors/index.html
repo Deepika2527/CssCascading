@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            font-size:20px;
+            color: white;
+            position: relative;
+        }
+
+        #red{
+            background-color: tomato;
+            top: 10px;
+            z-index: 1;
+
+        }
+        #green{
+            background-color: green;
+            bottom: 90px;
+            /* z-index: 5; */
+        }
+        #blue{
+            background-color: blue;
+            bottom : 190px;
+            z-index: 1;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="red">Division1</div>
+    <div id="green">Division2</div>
+    <div id="blue">Division3</div>
+    
+
+</body>
+</html>
