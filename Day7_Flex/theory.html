@@ -50,3 +50,937 @@ Task 2: what is the short hand proeprties for child
 Task3:Change the postion of one card/onechild
 
 -->
+
+
+
+============================================================
+CSS FLEXBOX - COMPLETE THEORY NOTES
+============================================================
+
+1. INTRODUCTION TO FLEXBOX
+============================================================
+
+Flexbox (Flexible Box Layout) is a CSS layout model used to arrange,
+align, distribute, and manage space between items inside a container.
+
+Flexbox is a One-Dimensional Layout System because it works in:
+
+✓ One Row (Horizontal Direction)
+OR
+✓ One Column (Vertical Direction)
+
+It is mainly used for:
+
+1. Navigation Bars
+2. Card Layouts
+3. Centering Elements
+4. Responsive Designs
+5. Dashboards
+6. Image Galleries
+
+============================================================
+2. IMPORTANT TERMINOLOGY
+============================================================
+
+Flex Container
+------------------------------------------------------------
+
+Parent Element
+
+Example:
+
+.container{
+    display:flex;
+}
+
+------------------------------------------------------------
+
+Flex Items
+------------------------------------------------------------
+
+Child Elements inside the flex container.
+
+Example:
+
+<div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+</div>
+
+Container = Parent
+
+Items = Children
+
+============================================================
+3. ENABLE FLEXBOX
+============================================================
+
+Syntax:
+
+.container{
+    display:flex;
+}
+
+By default:
+
+flex-direction:row;
+
+============================================================
+FLEXBOX AXES
+============================================================
+
+Main Axis
+------------------------------------------------------------
+
+Direction determined by flex-direction.
+
+Cross Axis
+------------------------------------------------------------
+
+Perpendicular to Main Axis.
+
+Example:
+
+flex-direction:row
+
+Main Axis  → Horizontal
+
+Cross Axis → Vertical
+
+------------------------------------------------------------
+
+flex-direction:column
+
+Main Axis  → Vertical
+
+Cross Axis → Horizontal
+
+============================================================
+PARENT PROPERTIES (CONTAINER PROPERTIES)
+============================================================
+
+1. display
+2. flex-direction
+3. justify-content
+4. align-items
+5. align-content
+6. flex-wrap
+7. flex-flow
+8. gap
+9. row-gap
+10. column-gap
+
+============================================================
+4. DISPLAY FLEX
+============================================================
+
+Syntax:
+
+display:flex;
+
+Purpose:
+
+Converts a normal container into a flex container.
+
+============================================================
+5. FLEX-DIRECTION
+============================================================
+
+Definition:
+
+Controls the direction of flex items.
+
+Syntax:
+
+flex-direction:value;
+
+Values:
+
+1. row
+2. row-reverse
+3. column
+4. column-reverse
+
+------------------------------------------------------------
+row (Default)
+------------------------------------------------------------
+
+Items arranged left to right.
+
+flex-direction:row;
+
+------------------------------------------------------------
+row-reverse
+------------------------------------------------------------
+
+Items arranged right to left.
+
+flex-direction:row-reverse;
+
+------------------------------------------------------------
+column
+------------------------------------------------------------
+
+Items arranged top to bottom.
+
+flex-direction:column;
+
+------------------------------------------------------------
+column-reverse
+------------------------------------------------------------
+
+Items arranged bottom to top.
+
+flex-direction:column-reverse;
+
+============================================================
+6. JUSTIFY-CONTENT
+============================================================
+
+Definition:
+
+Aligns items along the Main Axis.
+
+Syntax:
+
+justify-content:value;
+
+Values:
+
+1. flex-start
+2. flex-end
+3. center
+4. space-between
+5. space-around
+6. space-evenly
+
+------------------------------------------------------------
+flex-start (Default)
+------------------------------------------------------------
+
+Items start from beginning.
+
+justify-content:flex-start;
+
+------------------------------------------------------------
+flex-end
+------------------------------------------------------------
+
+Items move to end.
+
+justify-content:flex-end;
+
+------------------------------------------------------------
+center
+------------------------------------------------------------
+
+Items move to center.
+
+justify-content:center;
+
+------------------------------------------------------------
+space-between
+------------------------------------------------------------
+
+First item at start.
+Last item at end.
+Equal space between items.
+
+justify-content:space-between;
+
+------------------------------------------------------------
+space-around
+------------------------------------------------------------
+
+Equal space around items.
+
+justify-content:space-around;
+
+------------------------------------------------------------
+space-evenly
+------------------------------------------------------------
+
+Equal spacing everywhere.
+
+justify-content:space-evenly;
+
+============================================================
+7. ALIGN-ITEMS
+============================================================
+
+Definition:
+
+Aligns items along Cross Axis.
+
+Syntax:
+
+align-items:value;
+
+Values:
+
+1. stretch (Default)
+2. flex-start
+3. flex-end
+4. center
+5. baseline
+
+------------------------------------------------------------
+stretch
+------------------------------------------------------------
+
+Items stretch to fill container.
+
+align-items:stretch;
+
+------------------------------------------------------------
+center
+------------------------------------------------------------
+
+Items move to center.
+
+align-items:center;
+
+------------------------------------------------------------
+flex-start
+------------------------------------------------------------
+
+Items move to top/start.
+
+align-items:flex-start;
+
+------------------------------------------------------------
+flex-end
+------------------------------------------------------------
+
+Items move to bottom/end.
+
+align-items:flex-end;
+
+------------------------------------------------------------
+baseline
+------------------------------------------------------------
+
+Aligns text baselines.
+
+align-items:baseline;
+
+============================================================
+8. FLEX-WRAP
+============================================================
+
+Definition:
+
+Determines whether items stay in one line or move to next line.
+
+Syntax:
+
+flex-wrap:value;
+
+Values:
+
+1. nowrap (Default)
+2. wrap
+3. wrap-reverse
+
+------------------------------------------------------------
+nowrap
+------------------------------------------------------------
+
+All items stay in one line.
+
+flex-wrap:nowrap;
+
+------------------------------------------------------------
+wrap
+------------------------------------------------------------
+
+Items move to next line.
+
+flex-wrap:wrap;
+
+------------------------------------------------------------
+wrap-reverse
+------------------------------------------------------------
+
+Items move to next line in reverse order.
+
+flex-wrap:wrap-reverse;
+
+============================================================
+9. ALIGN-CONTENT
+============================================================
+
+Definition:
+
+Works when multiple rows exist.
+
+Controls spacing between rows.
+
+Syntax:
+
+align-content:value;
+
+Values:
+
+1. stretch
+2. flex-start
+3. flex-end
+4. center
+5. space-between
+6. space-around
+7. space-evenly
+
+Example:
+
+align-content:center;
+
+Important:
+
+Works only when:
+
+flex-wrap:wrap;
+
+============================================================
+10. FLEX-FLOW
+============================================================
+
+Definition:
+
+Shorthand property for:
+
+flex-direction + flex-wrap
+
+Syntax:
+
+flex-flow:
+direction wrap;
+
+Example:
+
+flex-flow:row wrap;
+
+flex-flow:column wrap;
+
+flex-flow:row-reverse nowrap;
+
+============================================================
+11. GAP
+============================================================
+
+Definition:
+
+Creates space between flex items.
+
+Syntax:
+
+gap:value;
+
+Example:
+
+gap:20px;
+
+============================================================
+12. ROW-GAP
+============================================================
+
+Space between rows.
+
+Syntax:
+
+row-gap:20px;
+
+============================================================
+13. COLUMN-GAP
+============================================================
+
+Space between columns.
+
+Syntax:
+
+column-gap:20px;
+
+============================================================
+CHILD PROPERTIES
+============================================================
+
+1. order
+2. flex-grow
+3. flex-shrink
+4. flex-basis
+5. flex
+6. align-self
+
+============================================================
+14. ORDER
+============================================================
+
+Definition:
+
+Changes visual order of flex items.
+
+Syntax:
+
+order:number;
+
+Example:
+
+.card1{
+    order:3;
+}
+
+.card2{
+    order:1;
+}
+
+Result:
+
+Card2 appears before Card1.
+
+Default:
+
+order:0;
+
+============================================================
+15. FLEX-GROW
+============================================================
+
+Definition:
+
+Determines how much an item grows.
+
+Syntax:
+
+flex-grow:number;
+
+Example:
+
+.card{
+    flex-grow:1;
+}
+
+Values:
+
+0 = No Growth
+
+1 = Grow
+
+2 = Grow twice
+
+============================================================
+16. FLEX-SHRINK
+============================================================
+
+Definition:
+
+Determines how much an item shrinks.
+
+Syntax:
+
+flex-shrink:number;
+
+Example:
+
+.card{
+    flex-shrink:1;
+}
+
+Default:
+
+1
+
+============================================================
+17. FLEX-BASIS
+============================================================
+
+Definition:
+
+Defines initial size before growing or shrinking.
+
+Syntax:
+
+flex-basis:value;
+
+Examples:
+
+flex-basis:200px;
+
+flex-basis:50%;
+
+flex-basis:auto;
+
+============================================================
+18. FLEX PROPERTY
+============================================================
+
+Definition:
+
+Shorthand for:
+
+flex-grow
+flex-shrink
+flex-basis
+
+Syntax:
+
+flex:
+grow shrink basis;
+
+Example:
+
+flex:1 1 200px;
+
+Breakdown:
+
+flex-grow   = 1
+flex-shrink = 1
+flex-basis  = 200px
+
+============================================================
+19. ALIGN-SELF
+============================================================
+
+Definition:
+
+Overrides align-items for individual child.
+
+Syntax:
+
+align-self:value;
+
+Values:
+
+auto
+stretch
+center
+flex-start
+flex-end
+baseline
+
+Example:
+
+.card{
+    align-self:center;
+}
+
+============================================================
+IMPORTANT DIFFERENCES
+============================================================
+
+JUSTIFY-CONTENT
+
+Works on:
+Main Axis
+
+Controls:
+Entire Group
+
+------------------------------------------------------------
+
+ALIGN-ITEMS
+
+Works on:
+Cross Axis
+
+Controls:
+All Children
+
+------------------------------------------------------------
+
+ALIGN-SELF
+
+Works on:
+Cross Axis
+
+Controls:
+Single Child
+
+============================================================
+INTERVIEW QUESTIONS & ANSWERS
+============================================================
+
+Q1. What is Flexbox?
+
+Answer:
+
+A one-dimensional CSS layout model used for arranging and aligning items.
+
+------------------------------------------------------------
+
+Q2. Why is Flexbox called one-dimensional?
+
+Answer:
+
+Because it works in either:
+
+Row
+OR
+Column
+
+Only one direction at a time.
+
+------------------------------------------------------------
+
+Q3. How do you enable Flexbox?
+
+Answer:
+
+display:flex;
+
+------------------------------------------------------------
+
+Q4. What is the default flex-direction?
+
+Answer:
+
+row
+
+------------------------------------------------------------
+
+Q5. What is the default justify-content?
+
+Answer:
+
+flex-start
+
+------------------------------------------------------------
+
+Q6. What is the default align-items?
+
+Answer:
+
+stretch
+
+------------------------------------------------------------
+
+Q7. What is the default flex-wrap?
+
+Answer:
+
+nowrap
+
+------------------------------------------------------------
+
+Q8. Difference between justify-content and align-items?
+
+Answer:
+
+justify-content:
+Main Axis
+
+align-items:
+Cross Axis
+
+------------------------------------------------------------
+
+Q9. Difference between align-items and align-self?
+
+Answer:
+
+align-items:
+All children
+
+align-self:
+One child
+
+------------------------------------------------------------
+
+Q10. Which property changes item order?
+
+Answer:
+
+order
+
+------------------------------------------------------------
+
+Q11. What is the shorthand property of flex-grow, flex-shrink and flex-basis?
+
+Answer:
+
+flex
+
+Example:
+
+flex:1 1 200px;
+
+------------------------------------------------------------
+
+Q12. What is the shorthand property of flex-direction and flex-wrap?
+
+Answer:
+
+flex-flow
+
+Example:
+
+flex-flow:row wrap;
+
+------------------------------------------------------------
+
+Q13. What is the default order value?
+
+Answer:
+
+0
+
+------------------------------------------------------------
+
+Q14. What does flex-grow do?
+
+Answer:
+
+Allows items to grow and occupy available space.
+
+------------------------------------------------------------
+
+Q15. What does flex-basis do?
+
+Answer:
+
+Defines initial size before growth or shrinking.
+
+------------------------------------------------------------
+
+Q16. When does align-content work?
+
+Answer:
+
+Only when:
+
+flex-wrap:wrap;
+
+and multiple rows exist.
+
+------------------------------------------------------------
+
+Q17. What is wrap-reverse?
+
+Answer:
+
+Items wrap into multiple rows in reverse direction.
+
+------------------------------------------------------------
+
+Q18. Which property creates spacing between flex items?
+
+Answer:
+
+gap
+
+------------------------------------------------------------
+
+Q19. Can Flexbox center elements both horizontally and vertically?
+
+Answer:
+
+Yes.
+
+Example:
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+------------------------------------------------------------
+
+Q20. Which property is used to move one card to a different position?
+
+Answer:
+
+order
+
+============================================================
+TASK ANSWERS
+============================================================
+
+Task 1:
+
+Work with wrap-reverse
+
+.container{
+    display:flex;
+    flex-wrap:wrap-reverse;
+}
+
+------------------------------------------------------------
+
+Task 2:
+
+What is the shorthand property for child properties?
+
+Answer:
+
+flex
+
+Syntax:
+
+flex:
+flex-grow
+flex-shrink
+flex-basis;
+
+------------------------------------------------------------
+
+Task 3:
+
+Change position of one card
+
+.card3{
+    order:-1;
+}
+
+Result:
+
+Card 3 moves before all cards.
+
+============================================================
+QUICK REVISION
+============================================================
+
+display:flex;
+→ Enables Flexbox
+
+flex-direction
+→ Row / Column
+
+justify-content
+→ Main Axis Alignment
+
+align-items
+→ Cross Axis Alignment
+
+align-content
+→ Multiple Row Alignment
+
+flex-wrap
+→ Wrapping Control
+
+flex-flow
+→ Direction + Wrap
+
+gap
+→ Space Between Items
+
+order
+→ Change Item Position
+
+flex-grow
+→ Grow Item
+
+flex-shrink
+→ Shrink Item
+
+flex-basis
+→ Initial Size
+
+flex
+→ Grow + Shrink + Basis
+
+align-self
+→ Individual Item Alignment
+
+============================================================
+END OF NOTES
+============================================================

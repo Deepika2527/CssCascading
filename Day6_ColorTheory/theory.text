@@ -1,0 +1,846 @@
+============================================================
+CSS COLORS & GRADIENTS - COMPLETE THEORY NOTES
+============================================================
+
+1. INTRODUCTION TO COLORS
+------------------------------------------------------------
+
+Colors are used to improve the appearance of web pages.
+
+CSS colors can be applied to:
+
+1. Text
+2. Backgrounds
+3. Borders
+4. Shadows
+5. Gradients
+
+Benefits of Colors:
+
+✓ Improves User Experience
+✓ Makes UI Attractive
+✓ Highlights Important Content
+✓ Creates Visual Hierarchy
+
+------------------------------------------------------------
+2. COLOR PROPERTY
+------------------------------------------------------------
+
+The color property is used to change the text color.
+
+Syntax:
+
+color: value;
+
+Example:
+
+h1{
+    color:red;
+}
+
+------------------------------------------------------------
+3. BACKGROUND COLOR PROPERTY
+------------------------------------------------------------
+
+Used to change the background color.
+
+Syntax:
+
+background-color: value;
+
+Example:
+
+div{
+    background-color: yellow;
+}
+
+------------------------------------------------------------
+4. WAYS TO DEFINE COLORS IN CSS
+------------------------------------------------------------
+
+CSS supports multiple color formats:
+
+1. Color Names
+2. RGB
+3. RGBA
+4. HEX
+5. HSL
+6. HSLA
+
+============================================================
+SECTION 1 : COLOR FORMATS
+============================================================
+
+------------------------------------------------------------
+5. COLOR NAMES
+------------------------------------------------------------
+
+CSS provides predefined color names.
+
+Examples:
+
+red
+green
+blue
+yellow
+orange
+pink
+purple
+black
+white
+gray
+
+Example:
+
+color:red;
+
+Advantages:
+
+✓ Easy to remember
+✓ Beginner Friendly
+
+Disadvantages:
+
+✗ Limited customization
+
+------------------------------------------------------------
+6. RGB COLORS
+------------------------------------------------------------
+
+RGB stands for:
+
+R = Red
+G = Green
+B = Blue
+
+Syntax:
+
+rgb(red, green, blue)
+
+Range:
+
+0 - 255
+
+Examples:
+
+rgb(255,0,0)       -> Red
+rgb(0,255,0)       -> Green
+rgb(0,0,255)       -> Blue
+rgb(255,255,255)   -> White
+rgb(0,0,0)         -> Black
+
+Example:
+
+color:rgb(255,0,0);
+
+------------------------------------------------------------
+7. RGBA COLORS
+------------------------------------------------------------
+
+RGBA stands for:
+
+Red
+Green
+Blue
+Alpha
+
+Alpha controls transparency.
+
+Syntax:
+
+rgba(red,green,blue,alpha)
+
+Range of Alpha:
+
+0.0 to 1.0
+
+0   -> Invisible
+0.5 -> 50% Visible
+1   -> Fully Visible
+
+Example:
+
+background-color:
+rgba(255,0,0,0.5);
+
+------------------------------------------------------------
+8. HEX COLORS
+------------------------------------------------------------
+
+HEX stands for Hexadecimal.
+
+Syntax:
+
+#RRGGBB
+
+Examples:
+
+#FF0000 -> Red
+#00FF00 -> Green
+#0000FF -> Blue
+#FFFFFF -> White
+#000000 -> Black
+
+Example:
+
+color:#FF0000;
+
+------------------------------------------------------------
+9. SHORTHAND HEX
+------------------------------------------------------------
+
+Long Form      Short Form
+
+#FFFFFF   ->   #FFF
+
+#000000   ->   #000
+
+#FF0000   ->   #F00
+
+------------------------------------------------------------
+10. HSL COLORS
+------------------------------------------------------------
+
+HSL stands for:
+
+H = Hue
+S = Saturation
+L = Lightness
+
+Syntax:
+
+hsl(h,s,l)
+
+Example:
+
+hsl(0,100%,50%)
+
+Output:
+
+Red
+
+------------------------------------------------------------
+11. HUE
+------------------------------------------------------------
+
+Hue represents color on a color wheel.
+
+Range:
+
+0° to 360°
+
+Important Values:
+
+0°    -> Red
+60°   -> Yellow
+120°  -> Green
+180°  -> Cyan
+240°  -> Blue
+300°  -> Magenta
+360°  -> Red
+
+------------------------------------------------------------
+12. SATURATION
+------------------------------------------------------------
+
+Controls color intensity.
+
+Range:
+
+0% - 100%
+
+0%   -> Gray
+100% -> Pure Color
+
+------------------------------------------------------------
+13. LIGHTNESS
+------------------------------------------------------------
+
+Controls brightness.
+
+Range:
+
+0% - 100%
+
+0%   -> Black
+50%  -> Original Color
+100% -> White
+
+------------------------------------------------------------
+14. HSLA COLORS
+------------------------------------------------------------
+
+HSLA stands for:
+
+Hue
+Saturation
+Lightness
+Alpha
+
+Syntax:
+
+hsla(h,s,l,a)
+
+Example:
+
+background:
+hsla(120,100%,50%,0.5);
+
+============================================================
+SECTION 2 : CSS GRADIENTS
+============================================================
+
+------------------------------------------------------------
+15. WHAT IS A GRADIENT?
+------------------------------------------------------------
+
+A gradient is a smooth transition between two or more colors.
+
+Advantages:
+
+✓ Attractive UI
+✓ No Image Required
+✓ Lightweight
+✓ Responsive
+
+Types of Gradients:
+
+1. Linear Gradient
+2. Radial Gradient
+3. Conic Gradient
+
+============================================================
+16. LINEAR GRADIENT
+============================================================
+
+Definition:
+
+Colors flow in a straight line.
+
+Syntax:
+
+background:
+linear-gradient(color1,color2);
+
+Example:
+
+background:
+linear-gradient(red,blue);
+
+------------------------------------------------------------
+Linear Gradient Direction
+------------------------------------------------------------
+
+Syntax:
+
+background:
+linear-gradient(direction,color1,color2);
+
+Example:
+
+background:
+linear-gradient(to right,red,blue);
+
+Possible Directions:
+
+to right
+to left
+to top
+to bottom
+
+Examples:
+
+linear-gradient(to right,red,blue)
+
+linear-gradient(to left,red,blue)
+
+linear-gradient(to top,red,blue)
+
+linear-gradient(to bottom,red,blue)
+
+------------------------------------------------------------
+Using Degree Values
+------------------------------------------------------------
+
+Syntax:
+
+background:
+linear-gradient(angle,color1,color2);
+
+Examples:
+
+linear-gradient(0deg,red,blue)
+
+linear-gradient(90deg,red,blue)
+
+linear-gradient(180deg,red,blue)
+
+linear-gradient(270deg,red,blue)
+
+Meaning:
+
+0deg    -> Bottom to Top
+90deg   -> Left to Right
+180deg  -> Top to Bottom
+270deg  -> Right to Left
+
+------------------------------------------------------------
+Multiple Colors
+------------------------------------------------------------
+
+Example:
+
+background:
+linear-gradient(red,yellow,green,blue);
+
+------------------------------------------------------------
+Color Stops
+------------------------------------------------------------
+
+Used to control where colors appear.
+
+Syntax:
+
+background:
+linear-gradient(
+red 20%,
+yellow 50%,
+green 80%
+);
+
+Example:
+
+background:
+linear-gradient(
+red 20%,
+yellow 50%,
+green 80%
+);
+
+============================================================
+17. REPEATING LINEAR GRADIENT
+============================================================
+
+Definition:
+
+Repeats the gradient pattern continuously.
+
+Syntax:
+
+background:
+repeating-linear-gradient(
+color-stop
+);
+
+Example:
+
+background:
+repeating-linear-gradient(
+red 10%,
+yellow 20%
+);
+
+============================================================
+18. RADIAL GRADIENT
+============================================================
+
+Definition:
+
+Colors spread from a central point outward.
+
+Shape:
+
+Circle or Ellipse
+
+Syntax:
+
+background:
+radial-gradient(color1,color2);
+
+Example:
+
+background:
+radial-gradient(red,blue);
+
+------------------------------------------------------------
+Default Behavior
+------------------------------------------------------------
+
+Starts from center.
+
+Moves outward.
+
+------------------------------------------------------------
+Shape Values
+------------------------------------------------------------
+
+circle
+ellipse
+
+Syntax:
+
+background:
+radial-gradient(circle,red,blue);
+
+background:
+radial-gradient(ellipse,red,blue);
+
+------------------------------------------------------------
+Position Values
+------------------------------------------------------------
+
+center
+top
+bottom
+left
+right
+
+Example:
+
+background:
+radial-gradient(
+circle at top,
+red,
+blue
+);
+
+------------------------------------------------------------
+Color Stops
+------------------------------------------------------------
+
+Example:
+
+background:
+radial-gradient(
+red 20%,
+yellow 40%,
+green 70%
+);
+
+------------------------------------------------------------
+Complete Syntax
+------------------------------------------------------------
+
+background:
+radial-gradient(
+shape position,
+color-stop1,
+color-stop2,
+color-stop3
+);
+
+Example:
+
+background:
+radial-gradient(
+circle at center,
+red 10%,
+yellow 50%,
+green 100%
+);
+
+============================================================
+19. REPEATING RADIAL GRADIENT
+============================================================
+
+Definition:
+
+Repeats circular color patterns.
+
+Syntax:
+
+background:
+repeating-radial-gradient(
+red 10%,
+yellow 20%
+);
+
+============================================================
+20. CONIC GRADIENT
+============================================================
+
+Definition:
+
+Colors rotate around a center point like a pie chart.
+
+Introduced in CSS3.
+
+Syntax:
+
+background:
+conic-gradient(color1,color2);
+
+Example:
+
+background:
+conic-gradient(red,blue);
+
+------------------------------------------------------------
+How It Works
+------------------------------------------------------------
+
+Linear Gradient:
+Straight Line
+
+Radial Gradient:
+Center to Outside
+
+Conic Gradient:
+Rotates Around Center
+
+------------------------------------------------------------
+Using Multiple Colors
+------------------------------------------------------------
+
+background:
+conic-gradient(
+red,
+yellow,
+green,
+blue
+);
+
+------------------------------------------------------------
+Using Degree Values
+------------------------------------------------------------
+
+Syntax:
+
+background:
+conic-gradient(
+from angle,
+colors
+);
+
+Example:
+
+background:
+conic-gradient(
+from 90deg,
+red,
+yellow,
+green
+);
+
+------------------------------------------------------------
+Color Stops
+------------------------------------------------------------
+
+Example:
+
+background:
+conic-gradient(
+red 0deg,
+yellow 120deg,
+green 240deg,
+blue 360deg
+);
+
+------------------------------------------------------------
+Position Values
+------------------------------------------------------------
+
+Syntax:
+
+background:
+conic-gradient(
+from 0deg at center,
+red,
+blue
+);
+
+Examples:
+
+at center
+at top
+at bottom
+at left
+at right
+
+============================================================
+21. REPEATING CONIC GRADIENT
+============================================================
+
+Definition:
+
+Repeats conic patterns.
+
+Syntax:
+
+background:
+repeating-conic-gradient(
+red 0deg 10deg,
+yellow 10deg 20deg
+);
+
+============================================================
+22. INTERVIEW QUESTIONS & ANSWERS
+============================================================
+
+Q1. What are the different ways to define colors in CSS?
+
+Answer:
+
+1. Color Names
+2. RGB
+3. RGBA
+4. HEX
+5. HSL
+6. HSLA
+
+------------------------------------------------------------
+
+Q2. What does RGB stand for?
+
+Answer:
+
+Red
+Green
+Blue
+
+------------------------------------------------------------
+
+Q3. What is the range of RGB values?
+
+Answer:
+
+0 to 255
+
+------------------------------------------------------------
+
+Q4. What is Alpha?
+
+Answer:
+
+Transparency value.
+
+Range:
+
+0 to 1
+
+------------------------------------------------------------
+
+Q5. What is the HEX code for White?
+
+Answer:
+
+#FFFFFF
+
+------------------------------------------------------------
+
+Q6. What is HSL?
+
+Answer:
+
+Hue
+Saturation
+Lightness
+
+------------------------------------------------------------
+
+Q7. What is a Gradient?
+
+Answer:
+
+A smooth transition between two or more colors.
+
+------------------------------------------------------------
+
+Q8. How many types of gradients are available?
+
+Answer:
+
+1. Linear Gradient
+2. Radial Gradient
+3. Conic Gradient
+
+------------------------------------------------------------
+
+Q9. Which gradient flows in a straight line?
+
+Answer:
+
+Linear Gradient
+
+------------------------------------------------------------
+
+Q10. Which gradient starts from the center?
+
+Answer:
+
+Radial Gradient
+
+------------------------------------------------------------
+
+Q11. Which gradient rotates around the center?
+
+Answer:
+
+Conic Gradient
+
+------------------------------------------------------------
+
+Q12. What is the difference between Radial and Conic Gradient?
+
+Answer:
+
+Radial:
+Center → Outside
+
+Conic:
+Rotates Around Center
+
+------------------------------------------------------------
+
+Q13. Which gradient is commonly used for Pie Charts?
+
+Answer:
+
+Conic Gradient
+
+------------------------------------------------------------
+
+Q14. Which gradient supports circle and ellipse shapes?
+
+Answer:
+
+Radial Gradient
+
+------------------------------------------------------------
+
+Q15. What are color stops?
+
+Answer:
+
+Color stops control where a particular color starts and ends within a gradient.
+
+Example:
+
+linear-gradient(
+red 20%,
+yellow 50%,
+green 80%
+);
+
+============================================================
+QUICK REVISION
+============================================================
+
+Color Names  -> red, blue, green
+RGB          -> rgb(255,0,0)
+RGBA         -> rgb + transparency
+HEX          -> #RRGGBB
+HSL          -> Hue Saturation Lightness
+HSLA         -> HSL + Alpha
+
+Linear Gradient -> Straight Line
+Radial Gradient -> Center to Outside
+Conic Gradient  -> Rotation Around Center
+
+Repeating Linear Gradient
+Repeating Radial Gradient
+Repeating Conic Gradient
+
+============================================================
+END OF NOTES
+============================================================

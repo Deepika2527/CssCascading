@@ -1,0 +1,816 @@
+============================================================
+CSS SELECTORS - COMPLETE THEORY NOTES
+============================================================
+
+1. WHAT ARE SELECTORS?
+============================================================
+
+Selectors are used to target and select HTML elements so that CSS
+styles can be applied to them.
+
+In simple words:
+
+"Selectors tell CSS which HTML element should receive the styling."
+
+Syntax:
+
+selector{
+    property:value;
+}
+
+Example:
+
+h1{
+    color:red;
+}
+
+Here:
+
+h1      -> Selector
+color   -> Property
+red     -> Value
+
+============================================================
+2. TYPES OF SELECTORS
+============================================================
+
+CSS selectors are mainly divided into:
+
+1. Universal Selector
+2. Element Selector
+3. Class Selector
+4. ID Selector
+5. Group Selector
+6. Descendant Selector
+7. Child Selector
+8. Adjacent Sibling Selector
+9. General Sibling Selector
+10. Attribute Selector
+11. Pseudo-Class Selector
+12. Pseudo-Element Selector
+
+============================================================
+3. UNIVERSAL SELECTOR (*)
+============================================================
+
+Symbol:
+
+*
+
+Purpose:
+
+Selects ALL elements in the webpage.
+
+Syntax:
+
+*{
+    margin:0;
+    padding:0;
+}
+
+Example:
+
+*{
+    color:red;
+}
+
+Result:
+
+Every element becomes red.
+
+Advantages:
+
+✓ Useful for CSS Reset
+✓ Applies common styles
+
+Disadvantage:
+
+✗ Can affect performance if overused
+
+============================================================
+4. ELEMENT SELECTOR
+============================================================
+
+Symbol:
+
+Tag Name
+
+Examples:
+
+h1
+p
+div
+span
+
+Purpose:
+
+Selects all occurrences of a specific HTML tag.
+
+Example:
+
+p{
+    color:blue;
+}
+
+Result:
+
+All paragraph elements become blue.
+
+============================================================
+5. CLASS SELECTOR (.)
+============================================================
+
+Symbol:
+
+.
+
+Purpose:
+
+Selects elements having a specific class.
+
+HTML:
+
+<p class="text">Hello</p>
+
+CSS:
+
+.text{
+    color:red;
+}
+
+Result:
+
+Only elements with class="text" become red.
+
+Advantages:
+
+✓ Reusable
+✓ Can be used on multiple elements
+
+============================================================
+6. ID SELECTOR (#)
+============================================================
+
+Symbol:
+
+#
+
+Purpose:
+
+Selects a unique element using ID.
+
+HTML:
+
+<h1 id="title">Welcome</h1>
+
+CSS:
+
+#title{
+    color:blue;
+}
+
+Result:
+
+The element with id="title" becomes blue.
+
+Rules:
+
+✓ ID should be unique.
+✓ One element should have one ID.
+
+============================================================
+7. GROUP SELECTOR (,)
+============================================================
+
+Symbol:
+
+,
+
+Purpose:
+
+Apply same styles to multiple selectors.
+
+Example:
+
+h1,p,div{
+    color:red;
+}
+
+Result:
+
+h1, p and div all become red.
+
+Advantage:
+
+✓ Reduces duplicate CSS
+
+============================================================
+8. DESCENDANT SELECTOR (SPACE)
+============================================================
+
+Symbol:
+
+(space)
+
+Purpose:
+
+Selects all descendants inside a parent.
+
+HTML:
+
+<div>
+    <p>Hello</p>
+</div>
+
+CSS:
+
+div p{
+    color:red;
+}
+
+Result:
+
+All p tags inside div become red.
+
+Important:
+
+It can target:
+
+Child
+Grandchild
+Great Grandchild
+
+============================================================
+9. CHILD SELECTOR (>)
+============================================================
+
+Symbol:
+
+>
+
+Purpose:
+
+Selects only direct children.
+
+HTML:
+
+<div>
+    <p>Child</p>
+
+    <section>
+        <p>Grandchild</p>
+    </section>
+</div>
+
+CSS:
+
+div > p{
+    color:red;
+}
+
+Result:
+
+Only direct child p gets styled.
+
+Grandchild p will not be selected.
+
+============================================================
+10. ADJACENT SIBLING SELECTOR (+)
+============================================================
+
+Symbol:
+
++
+
+Purpose:
+
+Selects immediate next sibling.
+
+HTML:
+
+<h1>Heading</h1>
+<p>Paragraph</p>
+
+CSS:
+
+h1 + p{
+    color:red;
+}
+
+Result:
+
+Only first p immediately after h1 is selected.
+
+============================================================
+11. GENERAL SIBLING SELECTOR (~)
+============================================================
+
+Symbol:
+
+~
+
+Purpose:
+
+Selects all siblings after a specified element.
+
+HTML:
+
+<h1>Heading</h1>
+<p>One</p>
+<p>Two</p>
+<p>Three</p>
+
+CSS:
+
+h1 ~ p{
+    color:red;
+}
+
+Result:
+
+All p elements after h1 become red.
+
+============================================================
+12. ATTRIBUTE SELECTOR ([ ])
+============================================================
+
+Symbol:
+
+[]
+
+Purpose:
+
+Select elements based on attributes.
+
+HTML:
+
+<input type="text">
+
+CSS:
+
+[type]{
+    border:2px solid red;
+}
+
+Result:
+
+All elements having type attribute are selected.
+
+------------------------------------------------------------
+Specific Attribute Value
+------------------------------------------------------------
+
+[type="text"]{
+    background:yellow;
+}
+
+============================================================
+13. PSEUDO-CLASS SELECTOR (:)
+============================================================
+
+Symbol:
+
+:
+
+Purpose:
+
+Styles an element based on its state.
+
+Examples:
+
+:hover
+:focus
+:first-child
+:last-child
+:nth-child()
+
+------------------------------------------------------------
+:hover
+------------------------------------------------------------
+
+button:hover{
+    background:red;
+}
+
+Applied when mouse is placed over the element.
+
+------------------------------------------------------------
+:first-child
+------------------------------------------------------------
+
+li:first-child{
+    color:red;
+}
+
+Selects first child.
+
+------------------------------------------------------------
+:last-child
+------------------------------------------------------------
+
+li:last-child{
+    color:red;
+}
+
+Selects last child.
+
+------------------------------------------------------------
+:nth-child()
+------------------------------------------------------------
+
+li:nth-child(2){
+    color:red;
+}
+
+Selects second child.
+
+============================================================
+14. PSEUDO-ELEMENT SELECTOR (::)
+============================================================
+
+Symbol:
+
+::
+
+Purpose:
+
+Styles a specific part of an element.
+
+Examples:
+
+::before
+::after
+::first-letter
+::first-line
+::selection
+
+------------------------------------------------------------
+::first-letter
+------------------------------------------------------------
+
+p::first-letter{
+    font-size:40px;
+}
+
+Result:
+
+First letter becomes large.
+
+------------------------------------------------------------
+::first-line
+------------------------------------------------------------
+
+p::first-line{
+    color:red;
+}
+
+Result:
+
+First line becomes red.
+
+------------------------------------------------------------
+::selection
+------------------------------------------------------------
+
+p::selection{
+    background:yellow;
+}
+
+Result:
+
+Selected text gets styled.
+
+============================================================
+15. SELECTOR SYMBOLS SUMMARY
+============================================================
+
+Selector Type             Symbol
+
+Universal                 *
+Element                   tagname
+Class                     .
+ID                        #
+Group                     ,
+Descendant                (space)
+Child                     >
+Adjacent Sibling          +
+General Sibling           ~
+Attribute                 []
+Pseudo Class             :
+Pseudo Element           ::
+
+============================================================
+16. DIFFERENCE BETWEEN CLASS AND ID
+============================================================
+
+CLASS
+
+Symbol:
+.
+
+Reusable:
+Yes
+
+Can be used multiple times:
+Yes
+
+Example:
+
+.text{
+    color:red;
+}
+
+------------------------------------------------------------
+
+ID
+
+Symbol:
+#
+
+Reusable:
+No
+
+Should be unique:
+Yes
+
+Example:
+
+#title{
+    color:red;
+}
+
+============================================================
+17. DIFFERENCE BETWEEN DESCENDANT AND CHILD
+============================================================
+
+DESCENDANT (space)
+
+Selects:
+
+Child
+Grandchild
+Great Grandchild
+
+Example:
+
+div p
+
+------------------------------------------------------------
+
+CHILD (>)
+
+Selects:
+
+Only direct child
+
+Example:
+
+div > p
+
+============================================================
+18. DIFFERENCE BETWEEN + AND ~
+============================================================
+
++
+
+Selects immediate next sibling only.
+
+Example:
+
+h1 + p
+
+------------------------------------------------------------
+
+~
+
+Selects all following siblings.
+
+Example:
+
+h1 ~ p
+
+============================================================
+19. INTERVIEW QUESTIONS AND ANSWERS
+============================================================
+
+Q1. What is a selector in CSS?
+
+Answer:
+
+A selector is used to target HTML elements and apply styles.
+
+------------------------------------------------------------
+
+Q2. Which selector selects all elements?
+
+Answer:
+
+Universal Selector
+
+Symbol:
+
+*
+
+------------------------------------------------------------
+
+Q3. Which selector uses a dot (.)?
+
+Answer:
+
+Class Selector
+
+Example:
+
+.text
+
+------------------------------------------------------------
+
+Q4. Which selector uses a hash (#)?
+
+Answer:
+
+ID Selector
+
+Example:
+
+#header
+
+------------------------------------------------------------
+
+Q5. What is the difference between class and ID?
+
+Answer:
+
+Class:
+Reusable
+
+ID:
+Unique
+
+------------------------------------------------------------
+
+Q6. Which selector is more specific, class or ID?
+
+Answer:
+
+ID Selector
+
+Specificity Order:
+
+Inline Style
+ID
+Class
+Element
+
+------------------------------------------------------------
+
+Q7. What is a group selector?
+
+Answer:
+
+Used to apply the same styles to multiple selectors.
+
+Example:
+
+h1,p,div{
+    color:red;
+}
+
+------------------------------------------------------------
+
+Q8. What is the difference between descendant and child selector?
+
+Answer:
+
+Descendant:
+Selects all nested elements.
+
+Child:
+Selects only direct children.
+
+------------------------------------------------------------
+
+Q9. What does + mean in CSS?
+
+Answer:
+
+Adjacent Sibling Selector
+
+Selects immediate next sibling.
+
+------------------------------------------------------------
+
+Q10. What does ~ mean in CSS?
+
+Answer:
+
+General Sibling Selector
+
+Selects all following siblings.
+
+------------------------------------------------------------
+
+Q11. What are attribute selectors?
+
+Answer:
+
+Selectors that target elements using attributes.
+
+Example:
+
+[type="text"]
+
+------------------------------------------------------------
+
+Q12. What is a pseudo-class?
+
+Answer:
+
+A selector that styles an element based on state.
+
+Example:
+
+:hover
+
+------------------------------------------------------------
+
+Q13. What is a pseudo-element?
+
+Answer:
+
+A selector that styles a part of an element.
+
+Example:
+
+::first-letter
+
+------------------------------------------------------------
+
+Q14. Difference between : and :: ?
+
+Answer:
+
+:
+Pseudo-Class
+
+Examples:
+
+:hover
+:focus
+
+::
+
+Pseudo-Element
+
+Examples:
+
+::before
+::after
+
+------------------------------------------------------------
+
+Q15. Which selector has highest specificity?
+
+Answer:
+
+Inline Style
+
+Then:
+
+ID Selector
+
+Then:
+
+Class Selector
+
+Then:
+
+Element Selector
+
+============================================================
+20. QUICK REVISION
+============================================================
+
+*      -> Universal Selector
+h1     -> Element Selector
+.text  -> Class Selector
+#id    -> ID Selector
+,      -> Group Selector
+(space)-> Descendant Selector
+>      -> Child Selector
++      -> Adjacent Sibling Selector
+~      -> General Sibling Selector
+[]     -> Attribute Selector
+:      -> Pseudo-Class Selector
+::     -> Pseudo-Element Selector
+
+Specificity Order:
+
+Inline Style
+ID Selector
+Class Selector
+Element Selector
+
+============================================================
+END OF NOTES
+============================================================

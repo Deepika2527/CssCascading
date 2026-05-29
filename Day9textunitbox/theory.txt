@@ -1,0 +1,907 @@
+============================================================
+CSS BOX-SIZING, TEXT-TRANSFORM & CSS UNITS
+COMPLETE THEORY NOTES
+============================================================
+
+============================================================
+SECTION 1 : BOX-SIZING
+============================================================
+
+1. WHAT IS BOX-SIZING?
+============================================================
+
+The box-sizing property determines how the total width and height
+of an element are calculated.
+
+By default, browsers use:
+
+box-sizing: content-box;
+
+Understanding box-sizing is important because it affects the final
+size of an element.
+
+Syntax:
+
+box-sizing:value;
+
+Values:
+
+1. content-box
+2. border-box
+
+============================================================
+CSS BOX MODEL
+============================================================
+
+Before learning box-sizing, understand the CSS Box Model.
+
+Every HTML element consists of:
+
++-----------------------+
+|       Margin          |
+|  +-----------------+  |
+|  |     Border      |  |
+|  | +-----------+   |  |
+|  | | Padding   |   |  |
+|  | | +------+  |   |  |
+|  | | |Content| |   |  |
+|  | | +------+  |   |  |
+|  | +-----------+   |  |
+|  +-----------------+  |
++-----------------------+
+
+Parts:
+
+1. Content
+2. Padding
+3. Border
+4. Margin
+
+============================================================
+2. CONTENT-BOX
+============================================================
+
+Definition:
+
+Default value of box-sizing.
+
+Width and height apply only to content.
+
+Syntax:
+
+box-sizing:content-box;
+
+Example:
+
+.box{
+    width:300px;
+    padding:20px;
+    border:10px solid black;
+    box-sizing:content-box;
+}
+
+Calculation:
+
+Content Width = 300px
+
+Left Padding = 20px
+Right Padding = 20px
+
+Left Border = 10px
+Right Border = 10px
+
+Total Width:
+
+300 + 20 + 20 + 10 + 10
+
+Total Width = 360px
+
+Formula:
+
+Total Width =
+Content + Left Padding + Right Padding
++ Left Border + Right Border
+
+Advantages:
+
+✓ Default browser behavior
+
+Disadvantages:
+
+✗ Difficult to maintain layouts
+✗ Element becomes larger than expected
+
+============================================================
+3. BORDER-BOX
+============================================================
+
+Definition:
+
+Width and height include:
+
+Content
+Padding
+Border
+
+Syntax:
+
+box-sizing:border-box;
+
+Example:
+
+.box{
+    width:300px;
+    padding:20px;
+    border:10px solid black;
+    box-sizing:border-box;
+}
+
+Calculation:
+
+Total Width = 300px
+
+Browser automatically adjusts content width.
+
+Formula:
+
+Total Width = Defined Width
+
+Content shrinks automatically.
+
+Advantages:
+
+✓ Easier Layout Management
+✓ Predictable Width
+✓ Most commonly used
+
+============================================================
+CONTENT-BOX VS BORDER-BOX
+============================================================
+
+CONTENT-BOX
+
+Width Includes:
+
+Only Content
+
+Formula:
+
+Content + Padding + Border
+
+Final Width:
+
+Increases
+
+------------------------------------------------------------
+
+BORDER-BOX
+
+Width Includes:
+
+Content + Padding + Border
+
+Formula:
+
+Total Width = Defined Width
+
+Final Width:
+
+Remains Fixed
+
+============================================================
+GLOBAL RESET
+============================================================
+
+Most developers use:
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+Reason:
+
+Makes sizing predictable.
+
+============================================================
+INTERVIEW QUESTIONS - BOX SIZING
+============================================================
+
+Q1. What is box-sizing?
+
+Answer:
+
+Determines how width and height are calculated.
+
+------------------------------------------------------------
+
+Q2. What is the default value of box-sizing?
+
+Answer:
+
+content-box
+
+------------------------------------------------------------
+
+Q3. Which box-sizing value is mostly used in modern websites?
+
+Answer:
+
+border-box
+
+------------------------------------------------------------
+
+Q4. Why is border-box preferred?
+
+Answer:
+
+Because width remains fixed and predictable.
+
+------------------------------------------------------------
+
+Q5. What is the formula for content-box?
+
+Answer:
+
+Total Width =
+Content + Padding + Border
+
+------------------------------------------------------------
+
+Q6. What is the formula for border-box?
+
+Answer:
+
+Total Width = Defined Width
+
+============================================================
+SECTION 2 : TEXT TRANSFORMATIONS
+============================================================
+
+1. WHAT IS TEXT-TRANSFORM?
+============================================================
+
+The text-transform property controls the capitalization of text.
+
+Syntax:
+
+text-transform:value;
+
+Values:
+
+1. none
+2. uppercase
+3. lowercase
+4. capitalize
+
+============================================================
+2. NONE
+============================================================
+
+Definition:
+
+Displays text exactly as written.
+
+Syntax:
+
+text-transform:none;
+
+Example:
+
+hello world
+
+Output:
+
+hello world
+
+============================================================
+3. UPPERCASE
+============================================================
+
+Definition:
+
+Converts all letters into capital letters.
+
+Syntax:
+
+text-transform:uppercase;
+
+Example:
+
+hello world
+
+Output:
+
+HELLO WORLD
+
+============================================================
+4. LOWERCASE
+============================================================
+
+Definition:
+
+Converts all letters into small letters.
+
+Syntax:
+
+text-transform:lowercase;
+
+Example:
+
+HELLO WORLD
+
+Output:
+
+hello world
+
+============================================================
+5. CAPITALIZE
+============================================================
+
+Definition:
+
+Converts first letter of every word into uppercase.
+
+Syntax:
+
+text-transform:capitalize;
+
+Example:
+
+hello world css
+
+Output:
+
+Hello World Css
+
+============================================================
+RELATED TEXT PROPERTIES
+============================================================
+
+text-align
+
+Values:
+
+left
+right
+center
+justify
+
+------------------------------------------------------------
+
+text-decoration
+
+Values:
+
+none
+underline
+overline
+line-through
+
+------------------------------------------------------------
+
+text-indent
+
+Example:
+
+text-indent:50px;
+
+------------------------------------------------------------
+
+letter-spacing
+
+Example:
+
+letter-spacing:5px;
+
+------------------------------------------------------------
+
+word-spacing
+
+Example:
+
+word-spacing:10px;
+
+------------------------------------------------------------
+
+line-height
+
+Example:
+
+line-height:30px;
+
+============================================================
+INTERVIEW QUESTIONS - TEXT TRANSFORM
+============================================================
+
+Q1. What is text-transform?
+
+Answer:
+
+Used to control capitalization of text.
+
+------------------------------------------------------------
+
+Q2. Which value converts text into uppercase?
+
+Answer:
+
+uppercase
+
+------------------------------------------------------------
+
+Q3. Which value converts text into lowercase?
+
+Answer:
+
+lowercase
+
+------------------------------------------------------------
+
+Q4. Which value capitalizes the first letter of each word?
+
+Answer:
+
+capitalize
+
+------------------------------------------------------------
+
+Q5. What is the default value of text-transform?
+
+Answer:
+
+none
+
+============================================================
+SECTION 3 : CSS UNITS
+============================================================
+
+WHAT ARE CSS UNITS?
+============================================================
+
+CSS units define the size of elements, fonts, spacing,
+widths, heights, margins, paddings, etc.
+
+Units are divided into:
+
+1. Absolute Units
+2. Relative Units
+
+============================================================
+ABSOLUTE UNITS
+============================================================
+
+Definition:
+
+Fixed units that do not depend on any parent element or screen size.
+
+Characteristics:
+
+✓ Fixed
+✓ Predictable
+✓ Not Responsive
+
+============================================================
+1. PX (PIXEL)
+============================================================
+
+Most commonly used unit.
+
+Syntax:
+
+width:100px;
+
+Meaning:
+
+100 pixels
+
+Example:
+
+font-size:16px;
+
+============================================================
+2. CM (CENTIMETER)
+============================================================
+
+Syntax:
+
+width:5cm;
+
+Mostly used for printing.
+
+============================================================
+3. MM (MILLIMETER)
+============================================================
+
+Syntax:
+
+width:50mm;
+
+Mostly used for printing.
+
+============================================================
+4. IN (INCH)
+============================================================
+
+Syntax:
+
+width:2in;
+
+1in = 96px
+
+============================================================
+5. PT (POINT)
+============================================================
+
+Syntax:
+
+font-size:12pt;
+
+1pt = 1/72 inch
+
+Used in print media.
+
+============================================================
+ABSOLUTE UNIT SUMMARY
+============================================================
+
+px  → Pixels
+cm  → Centimeters
+mm  → Millimeters
+in  → Inches
+pt  → Points
+
+============================================================
+RELATIVE UNITS
+============================================================
+
+Definition:
+
+Units that depend on another value.
+
+Characteristics:
+
+✓ Flexible
+✓ Responsive
+✓ Preferred in modern web design
+
+============================================================
+1. PERCENTAGE (%)
+============================================================
+
+Relative to Parent Element.
+
+Example:
+
+width:50%;
+
+If parent width = 1000px
+
+Child width = 500px
+
+============================================================
+2. VIEWPORT WIDTH (vw)
+============================================================
+
+Relative to browser width.
+
+Formula:
+
+1vw = 1% of viewport width
+
+Example:
+
+width:50vw;
+
+If viewport width = 1000px
+
+Element width = 500px
+
+============================================================
+3. VIEWPORT HEIGHT (vh)
+============================================================
+
+Relative to browser height.
+
+Formula:
+
+1vh = 1% of viewport height
+
+Example:
+
+height:100vh;
+
+Meaning:
+
+100% of screen height
+
+============================================================
+4. EM
+============================================================
+
+Relative to Parent Font Size.
+
+Example:
+
+Parent Font Size = 20px
+
+font-size:2em;
+
+Result:
+
+40px
+
+Formula:
+
+em = Parent Font Size × Value
+
+============================================================
+5. REM
+============================================================
+
+Relative to Root Element (html).
+
+Example:
+
+html{
+    font-size:16px;
+}
+
+font-size:2rem;
+
+Result:
+
+32px
+
+Formula:
+
+rem = Root Font Size × Value
+
+============================================================
+EM VS REM
+============================================================
+
+EM
+
+Relative To:
+
+Parent Element
+
+Can Change Frequently:
+
+Yes
+
+Nested Scaling:
+
+Yes
+
+------------------------------------------------------------
+
+REM
+
+Relative To:
+
+Root Element (html)
+
+Consistent:
+
+Yes
+
+Nested Scaling:
+
+No
+
+============================================================
+6. MIN-WIDTH
+============================================================
+
+Definition:
+
+Defines minimum width.
+
+Example:
+
+min-width:300px;
+
+Meaning:
+
+Element cannot become smaller than 300px.
+
+============================================================
+7. MAX-WIDTH
+============================================================
+
+Definition:
+
+Defines maximum width.
+
+Example:
+
+max-width:1200px;
+
+Meaning:
+
+Element cannot become larger than 1200px.
+
+============================================================
+MIN-WIDTH VS MAX-WIDTH
+============================================================
+
+MIN-WIDTH
+
+Sets minimum limit.
+
+Example:
+
+min-width:300px;
+
+------------------------------------------------------------
+
+MAX-WIDTH
+
+Sets maximum limit.
+
+Example:
+
+max-width:1200px;
+
+============================================================
+INTERVIEW QUESTIONS - CSS UNITS
+============================================================
+
+Q1. How many types of CSS units are there?
+
+Answer:
+
+1. Absolute Units
+2. Relative Units
+
+------------------------------------------------------------
+
+Q2. Which unit is most commonly used?
+
+Answer:
+
+px
+
+------------------------------------------------------------
+
+Q3. Which unit makes websites responsive?
+
+Answer:
+
+Relative Units
+
+------------------------------------------------------------
+
+Q4. What is vh?
+
+Answer:
+
+Viewport Height
+
+1vh = 1% of screen height
+
+------------------------------------------------------------
+
+Q5. What is vw?
+
+Answer:
+
+Viewport Width
+
+1vw = 1% of screen width
+
+------------------------------------------------------------
+
+Q6. What is the difference between em and rem?
+
+Answer:
+
+em:
+Relative to Parent Font Size
+
+rem:
+Relative to Root Font Size
+
+------------------------------------------------------------
+
+Q7. What does 100vh mean?
+
+Answer:
+
+100% of browser height
+
+------------------------------------------------------------
+
+Q8. What does 100vw mean?
+
+Answer:
+
+100% of browser width
+
+------------------------------------------------------------
+
+Q9. Which is better for scalable typography?
+
+Answer:
+
+rem
+
+------------------------------------------------------------
+
+Q10. What is min-width?
+
+Answer:
+
+Defines minimum allowed width.
+
+------------------------------------------------------------
+
+Q11. What is max-width?
+
+Answer:
+
+Defines maximum allowed width.
+
+============================================================
+QUICK REVISION
+============================================================
+
+BOX-SIZING
+
+content-box
+→ Content Only
+
+border-box
+→ Content + Padding + Border
+
+------------------------------------------------------------
+
+TEXT-TRANSFORM
+
+none
+uppercase
+lowercase
+capitalize
+
+------------------------------------------------------------
+
+ABSOLUTE UNITS
+
+px
+cm
+mm
+in
+pt
+
+------------------------------------------------------------
+
+RELATIVE UNITS
+
+%
+vh
+vw
+em
+rem
+
+------------------------------------------------------------
+
+RESPONSIVE DESIGN
+
+vh → Screen Height
+
+vw → Screen Width
+
+em → Parent Font Size
+
+rem → Root Font Size
+
+min-width → Minimum Limit
+
+max-width → Maximum Limit
+
+============================================================
+END OF NOTES
+============================================================

@@ -1,0 +1,817 @@
+Task 2: take a conatiner and keep 3-4 inages and i want use background color as a lineaer graident and then change the images using border-radius values
+
+============================================================
+CSS BACKGROUND PROPERTIES - COMPLETE THEORY NOTES
+============================================================
+
+1. INTRODUCTION TO BACKGROUND PROPERTIES
+============================================================
+
+Background properties are used to control the appearance of an
+element's background.
+
+Using background properties, we can:
+
+✓ Apply colors
+✓ Add images
+✓ Control image repetition
+✓ Control image position
+✓ Control image size
+✓ Create gradients
+✓ Create parallax effects
+
+Syntax:
+
+selector{
+    background-property:value;
+}
+
+============================================================
+2. BACKGROUND PROPERTIES LIST
+============================================================
+
+1. background-color
+2. background-image
+3. background-repeat
+4. background-position
+5. background-size
+6. background-attachment
+7. background-origin
+8. background-clip
+9. background
+10. Multiple Backgrounds
+
+============================================================
+1. BACKGROUND-COLOR
+============================================================
+
+Definition:
+
+Used to apply color to an element's background.
+
+Syntax:
+
+background-color: color;
+
+Values:
+
+red
+blue
+green
+yellow
+rgb()
+rgba()
+hex()
+hsl()
+hsla()
+transparent
+
+Examples:
+
+background-color:red;
+
+background-color:#ff0000;
+
+background-color:rgb(255,0,0);
+
+background-color:rgba(255,0,0,0.5);
+
+------------------------------------------------------------
+Example
+------------------------------------------------------------
+
+div{
+    background-color:yellow;
+}
+
+============================================================
+2. BACKGROUND-IMAGE
+============================================================
+
+Definition:
+
+Used to apply an image as the background.
+
+Syntax:
+
+background-image:url("image.jpg");
+
+Example:
+
+div{
+    background-image:url("flower.jpg");
+}
+
+------------------------------------------------------------
+Using Gradient as Background
+------------------------------------------------------------
+
+background-image:
+linear-gradient(red,blue);
+
+background-image:
+radial-gradient(red,blue);
+
+background-image:
+conic-gradient(red,blue);
+
+============================================================
+3. BACKGROUND-REPEAT
+============================================================
+
+Definition:
+
+Controls whether the background image repeats.
+
+Syntax:
+
+background-repeat:value;
+
+Values:
+
+repeat
+repeat-x
+repeat-y
+no-repeat
+space
+round
+
+------------------------------------------------------------
+repeat
+------------------------------------------------------------
+
+Default value.
+
+Repeats horizontally and vertically.
+
+background-repeat:repeat;
+
+------------------------------------------------------------
+repeat-x
+------------------------------------------------------------
+
+Repeats only horizontally.
+
+background-repeat:repeat-x;
+
+------------------------------------------------------------
+repeat-y
+------------------------------------------------------------
+
+Repeats only vertically.
+
+background-repeat:repeat-y;
+
+------------------------------------------------------------
+no-repeat
+------------------------------------------------------------
+
+Displays image only once.
+
+background-repeat:no-repeat;
+
+------------------------------------------------------------
+space
+------------------------------------------------------------
+
+Repeats image with equal spacing.
+
+background-repeat:space;
+
+------------------------------------------------------------
+round
+------------------------------------------------------------
+
+Repeats and stretches image if necessary.
+
+background-repeat:round;
+
+============================================================
+4. BACKGROUND-POSITION
+============================================================
+
+Definition:
+
+Controls the starting position of a background image.
+
+Syntax:
+
+background-position:value;
+
+------------------------------------------------------------
+Keyword Values
+------------------------------------------------------------
+
+left
+right
+top
+bottom
+center
+
+Examples:
+
+background-position:left;
+
+background-position:right;
+
+background-position:center;
+
+background-position:top;
+
+background-position:bottom;
+
+------------------------------------------------------------
+Combined Values
+------------------------------------------------------------
+
+background-position:left top;
+
+background-position:right top;
+
+background-position:left bottom;
+
+background-position:right bottom;
+
+background-position:center center;
+
+------------------------------------------------------------
+Percentage Values
+------------------------------------------------------------
+
+background-position:50% 50%;
+
+background-position:100% 0%;
+
+background-position:0% 100%;
+
+------------------------------------------------------------
+Pixel Values
+------------------------------------------------------------
+
+background-position:100px 50px;
+
+Meaning:
+
+100px from left
+50px from top
+
+============================================================
+5. BACKGROUND-SIZE
+============================================================
+
+Definition:
+
+Controls the size of the background image.
+
+Syntax:
+
+background-size:value;
+
+------------------------------------------------------------
+Keyword Values
+------------------------------------------------------------
+
+auto
+cover
+contain
+
+------------------------------------------------------------
+auto
+------------------------------------------------------------
+
+Default value.
+
+Uses original image size.
+
+background-size:auto;
+
+------------------------------------------------------------
+cover
+------------------------------------------------------------
+
+Image covers the entire container.
+
+May crop some portions.
+
+background-size:cover;
+
+Best for:
+
+Hero Sections
+Full Screen Banners
+
+------------------------------------------------------------
+contain
+------------------------------------------------------------
+
+Entire image becomes visible.
+
+May leave empty spaces.
+
+background-size:contain;
+
+------------------------------------------------------------
+Width and Height Values
+------------------------------------------------------------
+
+background-size:300px 200px;
+
+background-size:100% 100%;
+
+background-size:50% auto;
+
+============================================================
+IMPORTANT DIFFERENCE
+============================================================
+
+background-size:cover
+
+✓ Fills entire container
+✓ May crop image
+
+------------------------------------------------------------
+
+background-size:contain
+
+✓ Shows full image
+✓ May leave empty space
+
+============================================================
+6. BACKGROUND-ATTACHMENT
+============================================================
+
+Definition:
+
+Determines whether the background image scrolls with content.
+
+Syntax:
+
+background-attachment:value;
+
+Values:
+
+scroll
+fixed
+local
+
+------------------------------------------------------------
+scroll
+------------------------------------------------------------
+
+Default value.
+
+Image scrolls with page.
+
+background-attachment:scroll;
+
+------------------------------------------------------------
+fixed
+------------------------------------------------------------
+
+Image stays fixed.
+
+Creates parallax effect.
+
+background-attachment:fixed;
+
+------------------------------------------------------------
+local
+------------------------------------------------------------
+
+Background scrolls with element content.
+
+background-attachment:local;
+
+============================================================
+7. BACKGROUND-ORIGIN
+============================================================
+
+Definition:
+
+Determines where the background image starts.
+
+Syntax:
+
+background-origin:value;
+
+Values:
+
+padding-box
+border-box
+content-box
+
+------------------------------------------------------------
+padding-box
+------------------------------------------------------------
+
+Default value.
+
+Starts from padding area.
+
+background-origin:padding-box;
+
+------------------------------------------------------------
+border-box
+------------------------------------------------------------
+
+Starts from border area.
+
+background-origin:border-box;
+
+------------------------------------------------------------
+content-box
+------------------------------------------------------------
+
+Starts from content area.
+
+background-origin:content-box;
+
+============================================================
+8. BACKGROUND-CLIP
+============================================================
+
+Definition:
+
+Determines how far the background extends.
+
+Syntax:
+
+background-clip:value;
+
+Values:
+
+border-box
+padding-box
+content-box
+text
+
+------------------------------------------------------------
+border-box
+------------------------------------------------------------
+
+Default value.
+
+Background extends under border.
+
+background-clip:border-box;
+
+------------------------------------------------------------
+padding-box
+------------------------------------------------------------
+
+Stops at padding area.
+
+background-clip:padding-box;
+
+------------------------------------------------------------
+content-box
+------------------------------------------------------------
+
+Only content area gets background.
+
+background-clip:content-box;
+
+------------------------------------------------------------
+text
+------------------------------------------------------------
+
+Background appears inside text.
+
+background-clip:text;
+
+Example:
+
+background:linear-gradient(red,blue);
+-webkit-background-clip:text;
+color:transparent;
+
+============================================================
+9. BACKGROUND SHORTHAND PROPERTY
+============================================================
+
+Definition:
+
+Combines all background properties in a single line.
+
+Syntax:
+
+background:
+color
+image
+position
+/
+size
+repeat
+attachment
+origin
+clip;
+
+Example:
+
+background:
+yellow
+url("image.jpg")
+center
+/
+cover
+no-repeat
+fixed;
+
+============================================================
+10. MULTIPLE BACKGROUNDS
+============================================================
+
+Definition:
+
+Apply multiple background images.
+
+Syntax:
+
+background-image:
+url(img1.png),
+url(img2.png);
+
+Example:
+
+background-image:
+url(star.png),
+url(background.jpg);
+
+background-repeat:
+no-repeat,
+repeat;
+
+============================================================
+11. BACKGROUND WITH GRADIENTS
+============================================================
+
+Linear Gradient
+
+background:
+linear-gradient(red,blue);
+
+------------------------------------------------------------
+
+Radial Gradient
+
+background:
+radial-gradient(red,blue);
+
+------------------------------------------------------------
+
+Conic Gradient
+
+background:
+conic-gradient(red,blue);
+
+============================================================
+12. COMMONLY USED BACKGROUND COMBINATIONS
+============================================================
+
+Full Screen Background
+
+background-image:url(bg.jpg);
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+------------------------------------------------------------
+
+Parallax Effect
+
+background-image:url(bg.jpg);
+background-attachment:fixed;
+background-size:cover;
+
+------------------------------------------------------------
+
+Centered Image
+
+background-image:url(bg.jpg);
+background-position:center;
+background-repeat:no-repeat;
+
+============================================================
+13. INTERVIEW QUESTIONS AND ANSWERS
+============================================================
+
+Q1. What are background properties in CSS?
+
+Answer:
+
+Properties used to control the appearance of an element's background.
+
+------------------------------------------------------------
+
+Q2. Which property changes background color?
+
+Answer:
+
+background-color
+
+------------------------------------------------------------
+
+Q3. Which property applies a background image?
+
+Answer:
+
+background-image
+
+------------------------------------------------------------
+
+Q4. What is the default value of background-repeat?
+
+Answer:
+
+repeat
+
+------------------------------------------------------------
+
+Q5. How do you stop image repetition?
+
+Answer:
+
+background-repeat:no-repeat;
+
+------------------------------------------------------------
+
+Q6. What is the default value of background-position?
+
+Answer:
+
+0% 0%
+(or left top)
+
+------------------------------------------------------------
+
+Q7. What is the difference between cover and contain?
+
+Answer:
+
+Cover:
+Fills entire container.
+May crop image.
+
+Contain:
+Shows complete image.
+May leave empty spaces.
+
+------------------------------------------------------------
+
+Q8. Which property creates a parallax effect?
+
+Answer:
+
+background-attachment:fixed;
+
+------------------------------------------------------------
+
+Q9. What are the values of background-attachment?
+
+Answer:
+
+scroll
+fixed
+local
+
+------------------------------------------------------------
+
+Q10. What is the shorthand property for all background properties?
+
+Answer:
+
+background
+
+------------------------------------------------------------
+
+Q11. Which property controls image size?
+
+Answer:
+
+background-size
+
+------------------------------------------------------------
+
+Q12. Which property controls image location?
+
+Answer:
+
+background-position
+
+------------------------------------------------------------
+
+Q13. What is the default value of background-size?
+
+Answer:
+
+auto
+
+------------------------------------------------------------
+
+Q14. Which property determines where the image starts?
+
+Answer:
+
+background-origin
+
+------------------------------------------------------------
+
+Q15. Which property determines how far the background extends?
+
+Answer:
+
+background-clip
+
+------------------------------------------------------------
+
+Q16. Can we use multiple background images?
+
+Answer:
+
+Yes.
+
+Example:
+
+background-image:
+url(img1.png),
+url(img2.png);
+
+------------------------------------------------------------
+
+Q17. Which value makes the image cover the entire container?
+
+Answer:
+
+cover
+
+------------------------------------------------------------
+
+Q18. Which value ensures the complete image is visible?
+
+Answer:
+
+contain
+
+------------------------------------------------------------
+
+Q19. What is the default value of background-attachment?
+
+Answer:
+
+scroll
+
+------------------------------------------------------------
+
+Q20. What is the default value of background-origin?
+
+Answer:
+
+padding-box
+
+============================================================
+14. QUICK REVISION
+============================================================
+
+background-color
+→ Applies color
+
+background-image
+→ Applies image
+
+background-repeat
+→ Controls repetition
+
+background-position
+→ Controls image location
+
+background-size
+→ Controls image size
+
+background-attachment
+→ Controls scrolling behavior
+
+background-origin
+→ Controls image starting area
+
+background-clip
+→ Controls image visible area
+
+background
+→ Shorthand property
+
+cover
+→ Fill container
+
+contain
+→ Show complete image
+
+fixed
+→ Parallax effect
+
+no-repeat
+→ Show image once
+
+============================================================
+END OF NOTES
+============================================================''
+
