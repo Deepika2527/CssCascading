@@ -1,0 +1,21 @@
+Transforms
+
+Transform: translate, scale,skew, roatate
+
+
+translate - elenets can be moved toward the x or y axis based on th px
+tarnslate(100px,100px)- moves in x and y Direction
+translateX(100px)- only in xaxis
+
+matrix(scaleX,SkewY,SkewX,scaleY,translateX,translateY)
+
+
+scale: zooming the elememt
+Note the values are given in numeric liek 1, 1.5
+
+
+rotate: degres for rotating the element
+
+skew - this acts like streching the elememt
+
+
