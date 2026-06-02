@@ -1,0 +1,29 @@
+*{
+    background-color: lightgrey;
+
+}
+.container{
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    animation-name: ball;
+    animation-duration: 3s;
+    background: linear-gradient(lightcoral,yellow,lightgreen);
+    animation-delay: 3s;
+    animation-timing-function: ease-in;
+    /* animation-iteration-count: infinite; */
+}
+
+@keyframes ball{
+    from{
+        transform: translateX(0px) rotate(0deg);
+     
+    }
+    to{
+        transform: translateY(300px) rotate(360deg);
+
+    }
+}

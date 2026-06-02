@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .parent{
+         width: 700px;
+          border-bottom: 5px solid green;
+          /* background-color: antiquewhite; */
+          
+
+        }
+
+        .child{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background: repeating-linear-gradient(red 0px,red 10px, #ccc 10px, #ccc 20px);
+            line-height: 100px;
+            text-align: center;
+            animation-name: throwball;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+        @keyframes throwball{
+            0%{
+                transform: translateX(0)  translateY(0) rotate(0deg);
+
+            }
+            50%{
+                transform: translateX(300px) translateY(-100px) rotate(180deg);
+
+            }
+            100%{
+                transform: translateX(600px) translateY(0px) rotate(360deg);
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">😎</div>
+    </div>
+    
+</body>
+</html>
