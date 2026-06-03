@@ -1,0 +1,16 @@
+Mediaquries:
+
+
+Mobile smaller
+320px
+Mobile Mediim
+375-424px
+Mobile Large
+425px-767px
+Tablet/deskpt
+768-1023px
+Deskptop
+1024-1439
+
+
+@Media min-width() and max-width()
